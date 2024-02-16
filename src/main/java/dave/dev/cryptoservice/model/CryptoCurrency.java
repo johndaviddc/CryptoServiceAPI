@@ -16,4 +16,15 @@ public class CryptoCurrency {
     private String symbol;
     private BigDecimal price;
     private LocalDateTime lastUpdated;
+
+    public CryptoCurrency() {
+    }
+
+    public CryptoCurrency(Long id, String name, String symbol, BigDecimal price, LocalDateTime lastUpdated) {
+        this.id = id;
+        this.name = name;
+        this.symbol = symbol;
+        this.price = price;
+        this.lastUpdated = lastUpdated;
+    }
 }
