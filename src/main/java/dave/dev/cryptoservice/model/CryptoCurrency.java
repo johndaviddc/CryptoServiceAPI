@@ -67,4 +67,15 @@ public class CryptoCurrency {
     public void setLastUpdated(LocalDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
     }
+
+    @Override
+    public String toString() {
+        return "CryptoCurrency{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", symbol='" + symbol + '\'' +
+                ", price=" + price +
+                ", lastUpdated=" + lastUpdated +
+                '}';
+    }
 }
