@@ -1,3 +1,5 @@
+package dave.dev.cryptoservice.repository
+
 import com.example.cryptocurrencytracker.model.CryptoCurrency;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
