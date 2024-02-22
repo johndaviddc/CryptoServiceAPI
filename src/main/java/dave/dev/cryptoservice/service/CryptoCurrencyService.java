@@ -1,6 +1,6 @@
 package dave.dev.cryptoservice.service
 
-import com.example.cryptocurrencytracker.model.CryptoCurrency;
+import dave.dev.cryptoservice.model.CryptoCurrency;
 
 import java.util.List;
 
