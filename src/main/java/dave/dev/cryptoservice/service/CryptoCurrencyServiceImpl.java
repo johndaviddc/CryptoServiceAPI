@@ -1,5 +1,13 @@
 package dave.dev.cryptoservice.service;
 
+import dave.dev.cryptoservice.exception.CryptoCurrencyNotFoundException;
+import dave.dev.cryptoservice.model.CryptoCurrency;
+import dave.dev.cryptoservice.repository.CryptoCurrencyRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
 @Service
 public class CryptoCurrencyServiceImpl implements CryptoCurrencyService {
     
