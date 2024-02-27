@@ -1,0 +1,13 @@
+@RestController
+@RequestMapping("/api/cryptocurrencies")
+public class CryptoCurrencyController {
+
+    @Autowired
+    private CryptoCurrencyService cryptoCurrencyService;
+
+    @GetMapping
+    public ResponseEntity<List<CryptoCurrency>> getAllCryptoCurrencies() {
+        List<CryptoCurrency> cryptocurrencies = cryptoCurrencyService.getAllCryptoCurrencies();
+        return new ResponseEntity<>(cryptocurrencies, HttpStatus.OK);
+    }
+}
