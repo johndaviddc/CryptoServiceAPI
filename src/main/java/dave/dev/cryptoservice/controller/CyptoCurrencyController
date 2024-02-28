@@ -10,4 +10,10 @@ public class CryptoCurrencyController {
         List<CryptoCurrency> cryptocurrencies = cryptoCurrencyService.getAllCryptoCurrencies();
         return new ResponseEntity<>(cryptocurrencies, HttpStatus.OK);
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<CryptoCurrency> getCryptoCurrencyById(@PathVariable Long id) {
+        CryptoCurrency cryptoCurrency = cryptoCurrencyService.getCryptoCurrencyById(id);
+        return new ResponseEntity<>(cryptoCurrency, HttpStatus.OK);
+    }
 }
