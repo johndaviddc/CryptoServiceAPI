@@ -28,4 +28,10 @@ public class CryptoCurrencyController {
         cryptoCurrencyService.updateCryptoCurrency(id, updatedCryptoCurrency);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteCryptoCurrency(@PathVariable Lond id) {
+        cryptoCurrencyService.deleteCryptoCurrency(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 }
