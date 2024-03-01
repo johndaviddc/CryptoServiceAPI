@@ -22,4 +22,10 @@ public class CryptoCurrencyController {
         CryptoCurrency createdCryptoCurrency = cryptoCurrencyService.saveCryptoCurrency(cryptoCurrency);
         return new ResponseEntity<>(createdCryptoCurrency, HttpStatus.CREATED);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> updateCryptoCurrency(@PathVariable Long id, @RequestBody CryptoCurrency updatedCryptoCurrency) {
+        cryptoCurrencyService.updateCryptoCurrency(id, updatedCryptoCurrency);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 }
